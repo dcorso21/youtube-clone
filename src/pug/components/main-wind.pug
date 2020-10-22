@@ -4,50 +4,58 @@
             title: "Mountain Shots",
             channel: "Brisquake",
             viewCount: "32K",
-            date: "2 weeks ago"
+            date: "2 weeks ago",
+            official: false,
         },
         {
             title: "Our Planet Episode 2",
             channel: "Netflix",
             viewCount: "545.5K",
-            date: "4 months ago"
+            date: "4 months ago",
+            official: true,
         },
         {
             title: "Our Planet Episode 4",
             channel: "Netflix",
             viewCount: "611.2K",
-            date: "3 months ago"
+            date: "3 months ago",
+            official: true,
         },
         {
             title: "XDUOO 2 review",
             channel: "ZReviews",
             viewCount: "120.2K",
-            date: "2 weeks ago"
+            date: "2 weeks ago",
+            official: false,
+        },
+        {
+            title: "The Third Balkan Wars",
+            channel: "Knowledgia",
+            viewCount: "120.2 K views",
+            date: "6 months ago",
+            official: false,
+        },
+        {
+            title: "This Car Fasst!",
+            channel: "Top Gear",
+            viewCount: "120.2 K Views",
+            date: " • 2 weeks ago",
+            official: false,
         },
         {
             title: "XDUOO 2 review",
             channel: "ZReviews",
             viewCount: "120.2K",
-            date: "2 weeks ago"
+            date: "2 weeks ago",
+            official: false,
         },
         {
-            title: "XDUOO 2 review",
-            channel: "ZReviews",
-            viewCount: "120.2K",
-            date: "2 weeks ago"
+            title: "Story of Mel",
+            channel: "Computerphile",
+            viewCount: "120.2 K views",
+            date: "2 weeks ago",
+            official: true,
         },
-        {
-            title: "XDUOO 2 review",
-            channel: "ZReviews",
-            viewCount: "120.2K",
-            date: "2 weeks ago"
-        },
-        {
-            title: "XDUOO 2 review",
-            channel: "ZReviews",
-            viewCount: "120.2K",
-            date: "2 weeks ago"
-        }
     ];
     for (let i = 0; i < 8; i++){
         videoInfo[i].path = `imgs/thumbnails/thumb${i}.jpg`
@@ -59,8 +67,17 @@
         span Politics
         span Python
         span JavaScript
-        span JavaScript
+        span Shakespeare
+        span E.M. Forster
         span Supreme Court
+        span C++
+        span Sass
+        span George Orwell
+        span Pug
+        span Terminal Interface
+        span WWII
+        span American Revolution
+
 
     .videos
         each video in videoInfo
@@ -71,7 +88,10 @@
                         .pic 
                     .right
                         .title= video.title
-                        .channel= video.channel
+                        .channel
+                            span.c-name= video.channel
+                            if video.official
+                                i.fas.fa-check-circle
                         span.viewCount= video.viewCount
                         span.date= video.date
         each video in videoInfo
@@ -82,7 +102,10 @@
                         .pic 
                     .right
                         .title= video.title
-                        .channel= video.channel
+                        .channel
+                            span.c-name= video.channel
+                            if video.official
+                                i.fas.fa-check-circle
                         span.viewCount= video.viewCount
                         span.date= video.date
         each video in videoInfo
@@ -93,6 +116,9 @@
                         .pic 
                     .right
                         .title= video.title
-                        .channel= video.channel
+                        .channel
+                            span.c-name= video.channel
+                            if video.official
+                                i.fas.fa-check-circle
                         span.viewCount= video.viewCount
                         span.date= video.date

@@ -61,8 +61,17 @@ nav {
             margin-right: 30px;
         }
 
+        .darkMode {
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            &:hover{
+                background-color: gc(side-hover);
+            }
+        }
+
         i {
-            font-size: 130%;
+            font-size: 110%;
         }
 
         .notifications {

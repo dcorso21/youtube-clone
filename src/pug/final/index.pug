@@ -24,11 +24,16 @@ body
 
 script. 
     window.onload = () => {
-        let i = document.querySelector('.fa-home');
+        let i = document.querySelector('.darkMode');
         console.log(i);
         i.onclick = () => {
             bd = document.querySelector('body');
             bd.classList.toggle('dark');
+            if (i.innerHTML === 'Dark Mode'){
+                i.innerHTML = 'Light Mode'
+            } else {
+                i.innerHTML = 'Dark Mode'
+            }
         };
     }
 

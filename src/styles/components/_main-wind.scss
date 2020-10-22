@@ -2,7 +2,6 @@
 
 .main-wind {
     height: 90vh;
-    // overflow: scroll;
     background-color: gc(bg);
     .suggested-tags {
         display: flex;
@@ -36,28 +35,37 @@
                 object-fit: cover;
             }
             .info {
+                margin-top: 10px;
+                margin-bottom: 20px;
                 display: flex;
                 .left {
                     .pic {
                         height: 35px;
                         width: 35px;
                         border-radius: 50%;
-
-                        background-color: gc(fg);
-                        // background-color: linear-gradient(to bottom, gc(bg), gc(fg));
+                        background: linear-gradient(0.13turn, transparent, gc(fg));
                     }
                 }
                 .right {
+                    margin-left: 10px;
                     font-size: 14px;
                     // margin: 11px;
 
                     .title {
                         font-weight: 500;
                         color: gc(v-title);
+                        margin-bottom: 10px;
                     }
+
                     .channel,
                     span {
                         color: gc(v-info);
+                        margin-bottom: 5px;
+
+                        i {
+                            font-size: 80%;
+                            margin-left: 5px;
+                        }
                     }
                 }
             }
