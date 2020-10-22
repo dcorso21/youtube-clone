@@ -1,21 +1,40 @@
 @use '../libs' as *;
 
 nav {
-    padding: 10px 25px;
+    padding: 10px 15px;
     background-color: gc(nav-bg);
     display: flex;
     justify-content: space-between;
     i{
         color: gc(nav-icons);
+        padding: 10px;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover{
+            background-color: gc(side-hover);
+        }
     }
 
     .left-icons {
         display: flex;
         align-items: center;
-        img {
-            margin-left: 29px;
-            width: 30px;
-            height: 30px;
+        position: relative;
+
+        .yt-play {
+            cursor: pointer;
+            margin-left: 20px;
+            height: 20px;
+        }
+
+        .yt-text {
+            cursor: pointer;
+            position: absolute;
+            transform: translate(85px);
+
+            height: 18px;
+            &#ytw{
+                opacity: 0;
+            }
         }
     }
 
@@ -44,6 +63,7 @@ nav {
         }
 
         .searchBtn {
+            cursor: pointer;
             width: 10%;
             height: 32px;
             border: 1px solid gc(search-outline);
@@ -58,7 +78,7 @@ nav {
         @include flex-center;
 
         & > * {
-            margin-right: 30px;
+            margin-right: 10px;
         }
 
         .darkMode {
@@ -83,11 +103,11 @@ nav {
                 color: #fff;
                 border-radius: 50%;
                 font-size: 70%;
-                width: 19px;
-                height: 19px;
+                width: 16px;
+                height: 16px;
                 margin-left: 10px;
                 margin-top: -10px;
-                transform: translate(0px, -15px);
+                transform: translate(10px, -22px);
                 @include flex-center;
             }
         }
@@ -96,7 +116,7 @@ nav {
             height: 35px;
             width: 35px;
             border-radius: 50%;
-            margin-right: 0;
+            margin: 0 15px;
         }
     }
 }

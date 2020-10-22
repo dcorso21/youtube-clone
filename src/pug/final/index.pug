@@ -27,12 +27,20 @@ script.
         let i = document.querySelector('.darkMode');
         console.log(i);
         i.onclick = () => {
-            bd = document.querySelector('body');
+            let bd = document.querySelector('body');
+            let ytb = document.querySelector('#ytb');
+            let ytw = document.querySelector('#ytw');
+
             bd.classList.toggle('dark');
+
             if (i.innerHTML === 'Dark Mode'){
                 i.innerHTML = 'Light Mode'
+                ytw.style.opacity = 1;
+                ytb.style.opacity = 0;
             } else {
                 i.innerHTML = 'Dark Mode'
+                ytb.style.opacity = 1;
+                ytw.style.opacity = 0;
             }
         };
     }
