@@ -1,22 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap");
 :root {
+  --bg: #f9f9f9;
+  --fg: black;
+  --scroll-bar: #e5e5e5;
+  --nav-bg: #ffffffe7;
+  --search-outline: #D3D3D3;
+  --search-button: #f8f8f8;
+  --search-icon: #6f6f6f;
+  --search-focus: rgba(16, 129, 235, 0.904);
+  --search-placeholder: #656565;
+  --nav-icons: #606060;
+  --suggest-tag: #f2f2f2;
+  --tag-outline: #d9d9d9;
+  --tag-section-border: #e5e1e2;
+  --v-title: #030303;
+  --v-info: #606060;
+  --side-icon: #606060;
+  --side-hover: #e5e5e5;
+  --side-header: #606060;
+  --new-video: #065FD4;
+}
+
+.dark {
   --bg: #181818;
   --fg: #fff;
   --scroll-bar: rgba(255, 255, 255, 0.178);
   --nav-bg: #202020;
   --search-outline: #313131;
+  --search-button: #313131;
   --search-icon: #6f6f6f;
   --search-focus: rgba(16, 129, 235, 0.904);
+  --search-placeholder: #656565;
+  --nav-icons: #fff;
   --suggest-tag: #373737;
   --tag-outline: #4b4b4b;
-}
-
-.dark {
-  --bg: #222222;
-  --fg: #fff;
-  --nav-bg: #303030;
-  --search-outline: rgba(177, 177, 177, 0.39);
-  --search-focus: rgba(16, 129, 235, 0.904);
-  --scroll-bar: rgba(255, 255, 255, 0.178);
+  --v-title: #fff;
+  --v-info: #aaa;
+  --side-icon: #909090;
+  --side-hover: #383838;
+  --side-header: #aaa;
+  --new-video: #3EA6FF;
 }
 
 html, body, div, span, applet, object,
@@ -89,7 +112,8 @@ body {
   background-color: var(--bg);
   color: var(--fg);
   overflow: hidden;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: Roboto, Arial, sans-serif;
+  transition: all 0.4s;
 }
 body img {
   height: 80px;
@@ -119,6 +143,9 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+nav i {
+  color: var(--nav-icons);
+}
 nav .left-icons {
   display: flex;
   align-items: center;
@@ -138,6 +165,7 @@ nav .searchBar {
 nav .searchBar input {
   outline: none;
   width: 90%;
+  font-size: 16px;
   height: 30px;
   border: 1px solid var(--search-outline);
   background-color: var(--bg);
@@ -145,7 +173,7 @@ nav .searchBar input {
   color: var(--fg);
 }
 nav .searchBar input::placeholder {
-  color: var(--search-outline);
+  color: var(--search-placeholder);
 }
 nav .searchBar input:focus {
   border: 1px solid var(--search-focus);
@@ -154,7 +182,8 @@ nav .searchBar .searchBtn {
   width: 10%;
   height: 32px;
   border: 1px solid var(--search-outline);
-  background-color: var(--search-outline);
+  border-left: none;
+  background-color: var(--search-button);
   color: var(--search-icon);
   display: flex;
   justify-content: center;
@@ -177,6 +206,7 @@ nav .right-icons .notifications {
 nav .right-icons .notifications .notify-num {
   position: absolute;
   background-color: red;
+  color: #fff;
   border-radius: 50%;
   font-size: 70%;
   width: 19px;
@@ -209,18 +239,27 @@ nav .right-icons img {
   border-top: none;
 }
 .side-bar section h2 {
+  padding: 10px 0;
   padding-left: 24px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--side-header);
 }
 .side-bar .option {
   position: relative;
-  font-weight: 100;
-  font-size: 90%;
+  font-weight: 400;
+  font-size: 14px;
   list-style: none;
   text-decoration: none;
-  height: 35px;
-  padding: 5px 24px;
+  height: 40px;
+  line-height: 21px;
+  padding: 0px 24px;
   display: flex;
   align-items: center;
+}
+.side-bar .option:hover {
+  background-color: var(--side-hover);
 }
 .side-bar .option img {
   width: 25px;
@@ -230,10 +269,19 @@ nav .right-icons img {
 }
 .side-bar .option i {
   position: absolute;
-  color: var(--scroll-bar);
+  color: var(--side-icon);
+  font-size: 120%;
 }
 .side-bar .option span {
   margin-left: 25%;
+}
+.side-bar .option .new {
+  position: absolute;
+  right: 20px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--new-video);
 }
 
 .main-wind {
@@ -256,7 +304,7 @@ nav .right-icons img {
   background-color: var(--suggest-tag);
   border: 1px solid var(--tag-outline);
 }
-.main-wind .thumbs {
+.main-wind .videos {
   height: 90%;
   overflow: scroll;
   padding: 10px;
@@ -264,18 +312,31 @@ nav .right-icons img {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
-.main-wind .thumbs .video {
+.main-wind .videos .video {
   margin: 11px;
 }
-.main-wind .thumbs .video img {
+.main-wind .videos .video img {
   height: 140px;
   width: 250px;
   object-fit: cover;
 }
-.main-wind .thumbs .video .title {
-  font-weight: bold;
+.main-wind .videos .video .info {
+  display: flex;
 }
-.main-wind .thumbs .video .channel,
-.main-wind .thumbs .video span {
-  color: var(--suggest-tag);
+.main-wind .videos .video .info .left .pic {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: var(--fg);
+}
+.main-wind .videos .video .info .right {
+  font-size: 14px;
+}
+.main-wind .videos .video .info .right .title {
+  font-weight: 500;
+  color: var(--v-title);
+}
+.main-wind .videos .video .info .right .channel,
+.main-wind .videos .video .info .right span {
+  color: var(--v-info);
 }
