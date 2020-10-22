@@ -7,8 +7,8 @@
     .suggested-tags {
         display: flex;
         align-items: center;
-        border-bottom: 1px solid #777;
-        border-top: 1px solid #777;
+        border-bottom: 1px solid gc(suggest-tag);
+        border-top: 1px solid gc(suggest-tag);
         width: 100%;
         background-color: gc(nav-bg);
         span {
@@ -16,7 +16,8 @@
             padding: 8px 10px;
             margin: 10px 5px;
             border-radius: 20px;
-            background-color: #555;
+            background-color: gc(suggest-tag);
+            border: 1px solid gc(tag-outline);
         }
     }
 
@@ -40,7 +41,7 @@
             }
             .channel,
             span {
-                color: #555;
+                color: gc(suggest-tag);
             }
         }
     }

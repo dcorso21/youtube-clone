@@ -44,6 +44,7 @@ nav {
             height: 32px;
             border: 1px solid gc(search-outline);
             background-color: gc(search-outline);
+            color: gc(search-icon);
             @include flex-center;
         }
     }
