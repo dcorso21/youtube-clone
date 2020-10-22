@@ -8,7 +8,7 @@
 </head>
 <body>
   <nav>
-    <div class="left-icons"><i class="fas fa-bars"></i><img src="imgs/youTube-logo.png" alt="youtube-logo"></div>
+    <div class="left-icons"><i class="fas fa-bars"></i><img class="yt-play" src="imgs/youTube-logo.png" alt="youtube-logo"><img class="yt-text" id="ytb" src="imgs/brand/youtube-black.png" alt="youtube-logo"><img class="yt-text" id="ytw" src="imgs/brand/youtube-white.png" alt="youtube-logo"></div>
     <div class="searchBar">
       <input type="text" placeholder="Search">
       <div class="searchBtn"><i class="fas fa-search"></i></div>
@@ -59,7 +59,7 @@
       </section>
     </div>
     <div class="main-wind">
-      <div class="suggested-tags"><span>Politics</span><span>Python</span><span>JavaScript</span><span>Shakespeare</span><span>E.M. Forster</span><span>Supreme Court</span><span>C++</span><span>Sass</span><span>George Orwell</span><span>Pug</span><span>Terminal Interface</span><span>WWII</span><span>American Revolution</span></div>
+      <div class="suggested-tags"><span>Politics</span><span>Python</span><span>JavaScript</span><span>Shakespeare</span><span>E.M. Forster</span><span>Supreme Court</span><span>C++</span><span>Sass</span><span>George Orwell</span><span>Pug</span><span>Terminal Interface</span><span>WWII</span></div>
       <div class="videos">
         <div class="video"><img src="imgs/thumbnails/thumb0.jpg" alt="thumb">
           <div class="info">
@@ -358,12 +358,20 @@
       let i = document.querySelector('.darkMode');
       console.log(i);
       i.onclick = () => {
-          bd = document.querySelector('body');
+          let bd = document.querySelector('body');
+          let ytb = document.querySelector('#ytb');
+          let ytw = document.querySelector('#ytw');
+  
           bd.classList.toggle('dark');
+  
           if (i.innerHTML === 'Dark Mode'){
               i.innerHTML = 'Light Mode'
+              ytw.style.opacity = 1;
+              ytb.style.opacity = 0;
           } else {
               i.innerHTML = 'Dark Mode'
+              ytb.style.opacity = 1;
+              ytw.style.opacity = 0;
           }
       };
   }

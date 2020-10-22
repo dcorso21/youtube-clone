@@ -138,22 +138,38 @@ body img {
 }
 
 nav {
-  padding: 10px 25px;
+  padding: 10px 15px;
   background-color: var(--nav-bg);
   display: flex;
   justify-content: space-between;
 }
 nav i {
   color: var(--nav-icons);
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+nav i:hover {
+  background-color: var(--side-hover);
 }
 nav .left-icons {
   display: flex;
   align-items: center;
+  position: relative;
 }
-nav .left-icons img {
-  margin-left: 29px;
-  width: 30px;
-  height: 30px;
+nav .left-icons .yt-play {
+  cursor: pointer;
+  margin-left: 20px;
+  height: 20px;
+}
+nav .left-icons .yt-text {
+  cursor: pointer;
+  position: absolute;
+  transform: translate(85px);
+  height: 18px;
+}
+nav .left-icons .yt-text#ytw {
+  opacity: 0;
 }
 nav .searchBar {
   width: 45vw;
@@ -179,6 +195,7 @@ nav .searchBar input:focus {
   border: 1px solid var(--search-focus);
 }
 nav .searchBar .searchBtn {
+  cursor: pointer;
   width: 10%;
   height: 32px;
   border: 1px solid var(--search-outline);
@@ -195,7 +212,7 @@ nav .right-icons {
   align-items: center;
 }
 nav .right-icons > * {
-  margin-right: 30px;
+  margin-right: 10px;
 }
 nav .right-icons .darkMode {
   padding: 10px;
@@ -217,11 +234,11 @@ nav .right-icons .notifications .notify-num {
   color: #fff;
   border-radius: 50%;
   font-size: 70%;
-  width: 19px;
-  height: 19px;
+  width: 16px;
+  height: 16px;
   margin-left: 10px;
   margin-top: -10px;
-  transform: translate(0px, -15px);
+  transform: translate(10px, -22px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,7 +247,7 @@ nav .right-icons img {
   height: 35px;
   width: 35px;
   border-radius: 50%;
-  margin-right: 0;
+  margin: 0 15px;
 }
 
 .side-bar {
@@ -299,12 +316,14 @@ nav .right-icons img {
 .main-wind .suggested-tags {
   display: flex;
   align-items: center;
+  overflow-x: scroll;
   border-bottom: 1px solid var(--suggest-tag);
   border-top: 1px solid var(--suggest-tag);
   width: 100%;
   background-color: var(--nav-bg);
 }
 .main-wind .suggested-tags span {
+  cursor: pointer;
   font-size: 80%;
   padding: 8px 10px;
   margin: 10px 5px;
@@ -321,6 +340,7 @@ nav .right-icons img {
   flex-wrap: wrap;
 }
 .main-wind .videos .video {
+  cursor: pointer;
   margin: 11px;
 }
 .main-wind .videos .video img {
