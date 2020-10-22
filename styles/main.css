@@ -197,8 +197,16 @@ nav .right-icons {
 nav .right-icons > * {
   margin-right: 30px;
 }
+nav .right-icons .darkMode {
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+nav .right-icons .darkMode:hover {
+  background-color: var(--side-hover);
+}
 nav .right-icons i {
-  font-size: 130%;
+  font-size: 110%;
 }
 nav .right-icons .notifications {
   position: relative;
@@ -321,22 +329,32 @@ nav .right-icons img {
   object-fit: cover;
 }
 .main-wind .videos .video .info {
+  margin-top: 10px;
+  margin-bottom: 20px;
   display: flex;
 }
 .main-wind .videos .video .info .left .pic {
   height: 35px;
   width: 35px;
   border-radius: 50%;
-  background-color: var(--fg);
+  background: linear-gradient(0.13turn, transparent, var(--fg));
 }
 .main-wind .videos .video .info .right {
+  margin-left: 10px;
   font-size: 14px;
 }
 .main-wind .videos .video .info .right .title {
   font-weight: 500;
   color: var(--v-title);
+  margin-bottom: 10px;
 }
 .main-wind .videos .video .info .right .channel,
 .main-wind .videos .video .info .right span {
   color: var(--v-info);
+  margin-bottom: 5px;
+}
+.main-wind .videos .video .info .right .channel i,
+.main-wind .videos .video .info .right span i {
+  font-size: 80%;
+  margin-left: 5px;
 }
