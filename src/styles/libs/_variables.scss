@@ -1,6 +1,37 @@
 @use 'sass:map';
 $color_palette: (
+    // Basic
+    bg: #f9f9f9,
+    fg: rgb(0, 0, 0),
+    scroll-bar: #e5e5e5,
 
+    //Nav
+    nav-bg: #ffffffe7,
+    search-outline: #D3D3D3,
+    search-button: #f8f8f8,
+    search-icon: #6f6f6f,
+    search-focus: rgba(16, 129, 235, 0.904),
+    search-placeholder: #656565,
+    nav-icons: #606060,
+
+    //main-window
+    suggest-tag: #f2f2f2,
+    tag-outline: #d9d9d9,
+    tag-section-border: #e5e1e2,
+
+    //videos
+    v-title:#030303,
+    v-info:#606060,
+
+
+    // side-bar
+    side-icon: #606060,
+    side-hover: #e5e5e5,
+    side-header: #606060,
+    new-video: #065FD4,
+);
+
+$dark_color_palette: (
     // Basic
     bg: #181818,
     fg: #fff,
@@ -9,23 +40,25 @@ $color_palette: (
     //Nav
     nav-bg: #202020,
     search-outline: #313131,
+    search-button: #313131,
     search-icon: #6f6f6f,
     search-focus: rgba(16, 129, 235, 0.904),
+    search-placeholder: #656565,
+    nav-icons: #fff,
 
     //main-window
     suggest-tag: #373737,
     tag-outline: #4b4b4b,
-);
 
-$dark_color_palette: (
-    // Basic
-    bg: #222222,
-    fg: #fff,
-    //Nav
-    nav-bg: rgb(48, 48, 48),
-    search-outline: rgba(177, 177, 177, 0.39),
-    search-focus: rgba(16, 129, 235, 0.904),
-    scroll-bar: rgba(255, 255, 255, 0.178)
+    //videos
+    v-title:#fff,
+    v-info:#aaa,
+
+    // side-bar
+    side-icon: #909090,
+    side-hover: #383838,
+    side-header: #aaa,
+    new-video: #3EA6FF,
 );
 
 :root {

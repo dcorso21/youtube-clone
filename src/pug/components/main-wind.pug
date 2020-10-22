@@ -62,27 +62,37 @@
         span JavaScript
         span Supreme Court
 
-    .thumbs
+    .videos
         each video in videoInfo
             .video
                 img(src=video.path, alt="thumb")
-                .title= video.title
-                .channel= video.channel
-                span.viewCount= video.viewCount
-                span.date= video.date
+                .info
+                    .left
+                        .pic 
+                    .right
+                        .title= video.title
+                        .channel= video.channel
+                        span.viewCount= video.viewCount
+                        span.date= video.date
         each video in videoInfo
             .video
                 img(src=video.path, alt="thumb")
-                .title= video.title
-                .channel= video.channel
-                span.viewCount= video.viewCount
-                span.date= video.date
+                .info
+                    .left
+                        .pic 
+                    .right
+                        .title= video.title
+                        .channel= video.channel
+                        span.viewCount= video.viewCount
+                        span.date= video.date
         each video in videoInfo
             .video
                 img(src=video.path, alt="thumb")
-                .title= video.title
-                .channel= video.channel
-                span.viewCount= video.viewCount
-                span.date= video.date
-
-
+                .info
+                    .left
+                        .pic 
+                    .right
+                        .title= video.title
+                        .channel= video.channel
+                        span.viewCount= video.viewCount
+                        span.date= video.date

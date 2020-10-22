@@ -5,6 +5,9 @@ nav {
     background-color: gc(nav-bg);
     display: flex;
     justify-content: space-between;
+    i{
+        color: gc(nav-icons);
+    }
 
     .left-icons {
         display: flex;
@@ -24,6 +27,7 @@ nav {
         input {
             outline: none;
             width: 90%;
+            font-size: 16px;
             height: 30px;
             border: 1px solid gc(search-outline);
             background-color: gc(bg);
@@ -31,7 +35,7 @@ nav {
             color: gc(fg);
 
             &::placeholder {
-                color: gc(search-outline);
+                color: gc(search-placeholder);
             }
 
             &:focus {
@@ -43,7 +47,8 @@ nav {
             width: 10%;
             height: 32px;
             border: 1px solid gc(search-outline);
-            background-color: gc(search-outline);
+            border-left: none;
+            background-color: gc(search-button);
             color: gc(search-icon);
             @include flex-center;
         }
@@ -66,6 +71,7 @@ nav {
             .notify-num {
                 position: absolute;
                 background-color: rgb(255, 0, 0);
+                color: #fff;
                 border-radius: 50%;
                 font-size: 70%;
                 width: 19px;

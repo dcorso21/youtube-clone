@@ -1,13 +1,16 @@
 @use '../libs' as *;
 
-body{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,300;1,400&display=swap');
+
+body {
     background-color: gc(bg);
     color: gc(fg);
     overflow: hidden;
     img {
         height: 80px;
     }
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Roboto, Arial, sans-serif;
+    transition: all .4s;
 }
 
 /* Scrollbar  */
@@ -17,11 +20,11 @@ body{
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: gc(scroll-bar),
+    background: gc(scroll-bar);
     // background: rgba(255, 255, 255, 0.178);
 }
 
-::-webkit-scrollbar-corner{
+::-webkit-scrollbar-corner {
     color: transparent;
 }
 
