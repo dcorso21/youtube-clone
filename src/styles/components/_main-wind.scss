@@ -1,0 +1,47 @@
+@use '../libs' as *;
+
+.main-wind {
+    height: 90vh;
+    // overflow: scroll;
+    background-color: gc(bg);
+    .suggested-tags {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #777;
+        border-top: 1px solid #777;
+        width: 100%;
+        background-color: gc(nav-bg);
+        span {
+            font-size: 80%;
+            padding: 8px 10px;
+            margin: 10px 5px;
+            border-radius: 20px;
+            background-color: #555;
+        }
+    }
+
+    .thumbs {
+        height: 90%;
+        overflow: scroll;
+        padding: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        .video {
+            margin: 11px;
+            img {
+                height: 140px;
+                width: 250px;
+                object-fit: cover;
+            }
+
+            .title {
+                font-weight: bold;
+            }
+            .channel,
+            span {
+                color: #555;
+            }
+        }
+    }
+}

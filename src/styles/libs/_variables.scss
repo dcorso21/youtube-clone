@@ -1,0 +1,35 @@
+@use 'sass:map';
+$color_palette: (
+    // Basic
+    bg: #222222,
+    fg: #fff,
+    //Nav
+    nav-bg: rgb(48, 48, 48),
+    search-outline: rgba(177, 177, 177, 0.39),
+    search-focus: rgba(16, 129, 235, 0.904),
+    scroll-bar: rgba(255, 255, 255, 0.178)
+);
+
+$dark_color_palette: (
+    // Basic
+    bg: #222222,
+    fg: #fff,
+    //Nav
+    nav-bg: rgb(48, 48, 48),
+    search-outline: rgba(177, 177, 177, 0.39),
+    search-focus: rgba(16, 129, 235, 0.904),
+    scroll-bar: rgba(255, 255, 255, 0.178)
+);
+
+:root {
+    @each $name, $color in $color_palette {
+        --#{$name}: #{$color};
+    }
+}
+
+
+.dark {
+    @each $name, $color in $dark_color_palette {
+        --#{$name}: #{$color};
+    }
+}

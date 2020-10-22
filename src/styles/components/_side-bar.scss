@@ -1,0 +1,54 @@
+@use '../libs' as *;
+
+.side-bar{
+    height: 90vh;
+    min-width: 240px;
+    overflow: scroll;
+    background-color: gc(nav-bg);
+
+    section{
+        border-top: 1px solid gc(scroll-bar);
+        padding: 10px 0;
+        &:first-of-type{
+            border-top: none;
+
+        }
+
+        h2 {
+            padding-left: 24px;
+        }
+    }
+
+    .option {
+        position: relative;
+        font-weight: 100;
+        font-size: 90%;
+        list-style: none;
+        text-decoration: none;
+        height: 35px;
+        padding: 5px 24px;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        i {
+            position: absolute;
+            color: gc(scroll-bar);
+        }
+
+        span {
+            margin-left: 25%;
+        }
+
+
+    }
+
+
+
+}

@@ -1,0 +1,30 @@
+@use '../libs' as *;
+
+body{
+    background-color: gc(bg);
+    color: gc(fg);
+    overflow: hidden;
+    img {
+        height: 80px;
+    }
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* Scrollbar  */
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: gc(scroll-bar),
+    // background: rgba(255, 255, 255, 0.178);
+}
+
+::-webkit-scrollbar-corner{
+    color: transparent;
+}
+
+.layout {
+    display: flex;
+}

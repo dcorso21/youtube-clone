@@ -1,0 +1,11 @@
+@use 'libs' as *;
+
+//Base
+@use 'base/reset';
+@use 'base/layout';
+
+//Components
+
+@use 'components/nav';
+@use 'components/side-bar';
+@use 'components/main-wind';
