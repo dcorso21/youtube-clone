@@ -1,10 +1,13 @@
 :root {
-  --bg: #222222;
+  --bg: #181818;
   --fg: #fff;
-  --nav-bg: #303030;
-  --search-outline: rgba(177, 177, 177, 0.39);
-  --search-focus: rgba(16, 129, 235, 0.904);
   --scroll-bar: rgba(255, 255, 255, 0.178);
+  --nav-bg: #202020;
+  --search-outline: #313131;
+  --search-icon: #6f6f6f;
+  --search-focus: rgba(16, 129, 235, 0.904);
+  --suggest-tag: #373737;
+  --tag-outline: #4b4b4b;
 }
 
 .dark {
@@ -152,6 +155,7 @@ nav .searchBar .searchBtn {
   height: 32px;
   border: 1px solid var(--search-outline);
   background-color: var(--search-outline);
+  color: var(--search-icon);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,8 +243,8 @@ nav .right-icons img {
 .main-wind .suggested-tags {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #777;
-  border-top: 1px solid #777;
+  border-bottom: 1px solid var(--suggest-tag);
+  border-top: 1px solid var(--suggest-tag);
   width: 100%;
   background-color: var(--nav-bg);
 }
@@ -249,7 +253,8 @@ nav .right-icons img {
   padding: 8px 10px;
   margin: 10px 5px;
   border-radius: 20px;
-  background-color: #555;
+  background-color: var(--suggest-tag);
+  border: 1px solid var(--tag-outline);
 }
 .main-wind .thumbs {
   height: 90%;
@@ -272,5 +277,5 @@ nav .right-icons img {
 }
 .main-wind .thumbs .video .channel,
 .main-wind .thumbs .video span {
-  color: #555;
+  color: var(--suggest-tag);
 }
